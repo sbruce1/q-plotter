@@ -1,2 +1,6 @@
-window:`plt 2:(`window;2);
-window[0.1 0.2;0.1 0.2];
+window:`plt 2:(`draw;2);
+n:1000;
+s:10;
+x:%[;s]til n;
+y:sin x;
+window[x;y];

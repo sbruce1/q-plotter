@@ -1,7 +1,7 @@
 # Compiler and flags
 CC = gcc
-CFLAGS = -shared -fPIC -DKXVER=3 -g
-LDFLAGS = -shared -lglut -lGL -lm  # Add the necessary libraries
+CFLAGS = -shared -fPIC -DKXVER=3
+LDFLAGS = -shared -lm  # Add the necessary libraries
 
 # Source files
 SRCS = plt.c plt.h
