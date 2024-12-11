@@ -1,9 +1,5 @@
-#include <GL/glut.h>
+#include <stdio.h>
 #include "k.h"
 
-typedef unsigned int UI;
-K xp, yp;
-
-#define X(r,n,a,...) typedef r T##n; Z T##n(*n)a;
-#undef X
-
+#define G(s,...) fprintf(g,s"\n",##__VA_ARGS__)
+#define GS(s) G("set "s)
