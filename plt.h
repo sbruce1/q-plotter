@@ -16,4 +16,5 @@ V hms(FP g){
     GS("view map");
     GS("autoscale");
     GS("pm3d map");
+    GS("pm3d interpolate 10,10");
 }
