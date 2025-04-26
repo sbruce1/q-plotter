@@ -60,3 +60,11 @@ q examples/heatmap.q
 ```
 
 ![Heatmap](./examples/src/heatmap.png)
+
+### Animated Heatmap
+
+```q
+q examples/animation.q
+```
+
+![Animation](./examples/src/animation.gif)

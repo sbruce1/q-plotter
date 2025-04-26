@@ -4,5 +4,6 @@
 .plt.plt:{.plt.util.plt[`float$x;`float$y]};
 .plt.hm:{.plt.util.hm[`float$x]};
 .plt.hmupd:{.plt.util.hmupd[x;`float$y]};
-.plt.open:`plt 2:(`gopen;1);
+.plt.livehm:`plt 2:(`glivehm;1);
+.plt.gifhm:`plt 2:(`ggifhm;1);
 .plt.close:`plt 2:(`gclose;1);

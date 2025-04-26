@@ -8,6 +8,8 @@
 #define GS(s) GN("set "s)
 
 typedef FILE* FP;
+typedef V (*VFP)(FP);
+
 FP GP() {R popen("gnuplot -persistent 2>/dev/null", "w");}
 V hms(FP g){
     GS("palette defined (0 'blue', 0.5 'white', 1 'red')");
