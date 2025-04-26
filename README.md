@@ -20,11 +20,8 @@ Run
 make
 ```
 
-This will generate the `plt.so` file. You can run the example provided from this directory via
+This will generate the `plt.so` file. 
 
-```q
-q examples/sinewave.q
-```
 
 You can move this to your `$QHOME/l64` directory to have the shared object available from other directories.
 
@@ -41,5 +38,25 @@ When I need to quickly visualise something in Q, I either have to move outside m
 
 ```q
 \l plt.q
-plt[x;y]
+.plt.plt[x;y]
 ```
+
+## Examples
+
+Here are a couple examples of the API endpoints
+
+### Normal Plot
+
+```q
+q examples/sinewave.q
+```
+
+![Sinewave](./examples/src/sinewave.png)
+
+### Heatmap
+
+```q
+q examples/heatmap.q
+```
+
+![Heatmap](./examples/src/heatmap.png)
