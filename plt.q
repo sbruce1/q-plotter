@@ -1,4 +1,8 @@
-.plt.util.plt:`plt 2:(`draw;2);
-.plt.util.hm:`plt 2:(`heatmap;1);
+.plt.util.plt:`plt 2:(`plot;2);
+.plt.util.hm:`plt 2:(`hm;1);
+.plt.util.hmupd:`plt 2:(`hmupd;2);
 .plt.plt:{.plt.util.plt[`float$x;`float$y]};
 .plt.hm:{.plt.util.hm[`float$x]};
+.plt.hmupd:{.plt.util.hmupd[x;`float$y]};
+.plt.open:`plt 2:(`gopen;1);
+.plt.close:`plt 2:(`gclose;1);

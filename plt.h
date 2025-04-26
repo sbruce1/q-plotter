@@ -9,3 +9,9 @@
 
 typedef FILE* FP;
 FP GP() {R popen("gnuplot -persistent 2>/dev/null", "w");}
+V hms(FP g){
+    GS("palette defined (0 'blue', 0.5 'white', 1 'red')");
+    GS("view map");
+    GS("autoscale");
+    GS("pm3d map");
+}
