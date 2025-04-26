@@ -26,6 +26,11 @@ K hmupd(K handle, K x) {
     fflush(g);
     R (K)0;
 }
+K cbrange(K handle, K x, K y){
+    FP g = (FP)(handle->j);
+    GN("set cbrange[%g:%g]",x->f,y->f);
+    R (K)0;
+}
 K hm(K x){
     FP g=GP();
     I cn = kK(x)[0]->n;

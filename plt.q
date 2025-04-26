@@ -7,3 +7,4 @@
 .plt.livehm:`plt 2:(`glivehm;1);
 .plt.gifhm:`plt 2:(`ggifhm;1);
 .plt.close:`plt 2:(`gclose;1);
+.plt.cbrange:`plt 2:(`cbrange;3);
