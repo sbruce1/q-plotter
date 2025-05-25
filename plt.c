@@ -15,14 +15,17 @@ V gifhm(FP g) {
     GS("output 'out.gif'");
     hms(g);
 }
+V matplt(FP g, K x){
+    I cn = kK(x)[0]->n;
+    GN("splot '-' matrix with pm3d");
+    DO(xn, K r = kK(x)[i]; DOJ(cn, G("%g ", kF(r)[j]));GN(""));GN("e");
+}
 K glivehm(K x){R gmake(x, livehm);}
 K ggifhm(K x){R gmake(x, gifhm);}
 K gclose(K x){pclose((FP)x->j);R (K)0;}
 K hmupd(K handle, K x) {
     FP g = (FP)(handle->j);
-    I cn = kK(x)[0]->n;
-    GN("splot '-' matrix with pm3d");
-    DO(xn, K r = kK(x)[i]; DOJ(cn, G("%g ", kF(r)[j]));GN(""));GN("e");
+    matplt(g, x);
     fflush(g);
     R (K)0;
 }
@@ -33,9 +36,8 @@ K cbrange(K handle, K x, K y){
 }
 K hm(K x){
     FP g=GP();
-    I cn = kK(x)[0]->n;
     hms(g);
-    GN("splot '-' matrix with pm3d");
-    DO(xn, K r = kK(x)[i]; DOJ(cn, G("%g ", kF(r)[j]));GN(""));GN("e");
-    pclose(g);(K)0;
+    matplt(g, x);
+    pclose(g);
+    R (K)0;
 }
