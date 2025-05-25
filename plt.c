@@ -1,6 +1,23 @@
 #include "plt.h"
 
 K plot(K x,K y){FP g=GP();GS("autoscale");GN("pl '-' w l");DO(xn,GN("%g %g",kF(x)[i],kF(y)[i]));GN("e");pclose(g);(K)0;};
+K multiplot(K x,K y){
+    P(x->t != y->t != 0,krr((S)"type"));P(x->n != y->n,krr((S)"length"));
+    FP g=GP();
+    GS("autoscale");
+    G("plot ");
+    DO(x->n,G("'-' w l notitle");if(i < x->n - 1) G(", ");)
+    GN("");
+    DO(x->n,
+        K xin = kK(x)[i]; 
+        K yin = kK(y)[i];
+        P(xin->t != KF || yin->t != KF, krr((S)"type"));P(xin->n != yin->n, krr((S)"length"));
+        DOJ(xin->n, GN("%g %g", kF(xin)[j], kF(yin)[j]));
+        GN("e");
+    )
+    pclose(g);
+    (K)0;};
+
 K gmake(K x, VFP f){
     FP g = GP();
     f(g);

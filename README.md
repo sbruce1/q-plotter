@@ -53,6 +53,14 @@ q examples/sinewave.q
 
 ![Sinewave](./examples/src/sinewave.png)
 
+### Multi Plot
+
+```q
+q examples/multiplot.q
+```
+
+![Multiplot](./examples/src/multiplot.png)
+
 ### Heatmap
 
 ```q
